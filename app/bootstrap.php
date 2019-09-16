@@ -1,7 +1,2 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: torop
- * Date: 9/16/2019
- * Time: 2:55 PM
- */
+echo 'prere';
