@@ -6,11 +6,13 @@
 		{
 		}
 
-		public function index() {
-			$this->view('Hello');
+		public function index()
+		{
+			$this->view('pages/index', ['title' => 'Welcome']);
 		}
 
-		public function about($id) {
-			echo $id;
+		public function about()
+		{
+			$this->view('pages/about');
 		}
 	}
