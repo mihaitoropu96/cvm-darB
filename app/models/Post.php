@@ -11,7 +11,7 @@
 
 		public function getPosts()
 		{
-			$this->db->query("SELECT * FROM posts");
+			$this->db->query("SELECT * FROM post");
 
 			return $this->db->resultSet();
 		}
