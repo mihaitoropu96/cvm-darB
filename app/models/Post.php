@@ -11,9 +11,18 @@
 
 		public function getPosts()
 		{
-			$this->db->query("SELECT * FROM post");
+			$this->db->query("SELECT *,
+								  post.id as PostId,
+								  user.id as UserId 
+								  FROM post
+								  INNER JOIN user
+								  ON post.user_id = user.id
+								  ORDER BY post.created_at DESC 
+								  ");
 
-			return $this->db->resultSet();
+			$results = $this->db->resultSet();
+
+			return $results;
 		}
 
 	}
